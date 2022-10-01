@@ -90,10 +90,12 @@ const noSort = ()=>{
 
 }
 const setFilterOptions=(option:FilterOption)=>{
+store.paginationOptions.page = 1
 store.setFilterOptions(option)
 store.fetchShops()
 }
 const disableFilter = ()=>{
+  store.paginationOptions.page = 1
 filterOptions.value = null
 store.fetchShops()
 }

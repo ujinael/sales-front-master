@@ -7,7 +7,8 @@ export class ShopController {
 async createShops(req, res){
     const values = arr_Of_Values()
 const count = await (await pool.query('SELECT * from shops')).rowCount
-if(count)res.json("данные уже были созданы")
+
+if(count){ res.json("данные уже были созданы"); return;}
 
 const query_template = `INSERT INTO shops VALUES ${_multiInsert(values)}`
 

@@ -18,7 +18,6 @@ FAQ
 создать базу данных shops, 
 в ней создать таблицу shops
 с колонками "id","title","sales_count","distance"
- можно заполнить таблицу случайными значениями   
 </li>
 <li>
 Для заполнения таблицы сгенерированными данными нажать эту кнопку
@@ -42,6 +41,9 @@ store.createShops()
         padding: 2rem;
     }
     ul{
+        display: grid;
+        gap:.5rem;
+        list-style: none;
         text-align: left;
     }
 </style>
