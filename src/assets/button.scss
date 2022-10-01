@@ -1,0 +1,66 @@
+
+
+.rounded{
+    border-radius:calc(var(--common_border_radius)/2) ;
+}
+.accept{
+    background-color: var(--accept_color);
+    border-color: var(--accept_color);
+    color: whitesmoke;
+}
+.accept:nth-child(1),.default:nth-child(1),.delete:nth-child(1){
+    stroke:1px whitesmoke;
+    fill: whitesmoke;
+}
+.delete{
+    background-color: var(--delete_color);
+    border-color: var(--delete_color);
+    color: whitesmoke;
+}
+.cancel{
+    border-color: var(--cancel_color);
+    background-color: var(--cancel_color);
+    color: whitesmoke;
+}
+.default{
+    border-color: var(--default_color);
+    background-color: var(--default_color);
+    color: whitesmoke;
+}
+
+.accept:hover{
+    background-color: var(--accept_invert_color);
+    color: var(--accept_color);
+}
+.delete:hover{
+    background-color: var(--delete_invert_color);
+    color: var(--delete_color);
+}
+.cancel:hover{
+    background-color: var(--cancel_invert_color);
+    color: gray;
+}
+.default:hover{
+    background-color: var(--default_invert_color);
+    color: var(--default_color);
+}
+button:active{
+    transform: scale(1.05);
+    transition: transform .2s ease-in-out;
+    }
+.default:hover > :nth-child(1){
+    stroke:var(--default_color);
+    fill:var(--default_color) ;
+}
+.accept:hover > :nth-child(1){
+    stroke:var(--accept_color);
+    fill:var(--accept_color)
+}
+.cancel:hover > :nth-child(1){
+    stroke:var(--cancel_color);
+    fill:var(--cancel_color)
+}
+.delete:hover > :nth-child(1){
+    stroke:var(--delete_color);
+    fill:var(--delete_color)
+}

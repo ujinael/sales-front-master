@@ -1,0 +1,40 @@
+
+@mixin input_font {
+    font-size: var(--common_input_fontsize);
+   line-height: var(--common_input_lineheight);
+   font-weight: light;
+}
+@mixin input_border{
+   border-radius:calc( var(--common_border_radius)/2);
+   border:var(--common_input_border);
+}  
+
+.v-input{
+   box-sizing: border-box;
+   background-color: transparent;
+   padding: var(--common_input_h_padding) var(--common_input_v_padding);
+   height: var(--common_input_height);
+   min-width: 2rem;   
+   @include input_border;
+   @include input_font;
+   }
+   input:focus{
+   outline:none;
+   border:var(--common_input_hovered_border);
+   transition: all .1s ease-in-out;
+   }
+.v-input.x-short{
+width:3rem;
+}
+.v-input.short{
+   width:4rem;
+   }
+.v-input.medium{
+       width:6rem;
+       }
+.v-input.large{
+           width:10rem;
+           }
+           .v-input.full{
+               width:100%;
+               }
