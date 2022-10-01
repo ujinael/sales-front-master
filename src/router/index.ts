@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import VHomePage from '@/pages/home/VHomePage.vue'
 import VSalesPage from '@/pages/sales/VSalesPage.vue'
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
