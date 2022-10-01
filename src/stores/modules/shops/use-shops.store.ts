@@ -8,7 +8,6 @@ import {
 import { Api, Query } from "@stores/server.api";
 import type { CreateShopDto, UpdateShopDto } from "./dto";
 import { Type } from "class-transformer";
-import {arr_Of_Values} from "../../../server/utils.js"
 class Page{
   @Type(()=>Shop)
 items:Shop[] = []
@@ -102,12 +101,12 @@ const {total,page,limit} = this.paginationOptions
      
       return this.shop;
     },
-    async saveShop() {
+    async createShops() {
       this.loading = true;
-      const savedshop = await Api.shared()
+      await Api.shared()
         .child("shops")
-        .post<CreateShopDto, Shop>(this.shop!.toCreate(), Shop);
-      this.shops.push(savedshop);
+        .post<CreateShopDto, Shop>({}, Shop);
+     
       this.loading = false;
     },
     async updateShop() {
